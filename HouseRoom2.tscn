@@ -1,0 +1,188 @@
+[gd_scene load_steps=6 format=3 uid="uid://bunha58s5mxvx"]
+
+[ext_resource type="Texture2D" uid="uid://d1susxwngdfp1" path="res://Sprites/HouseFront.png" id="1_qpa7s"]
+[ext_resource type="PackedScene" uid="uid://d0inyfvs503ph" path="res://puzzle_sequence.tscn" id="2_higx6"]
+[ext_resource type="PackedScene" uid="uid://ds7fr13u8cqvt" path="res://puzzle_grid.tscn" id="2_ve4wb"]
+[ext_resource type="PackedScene" uid="uid://cklivvijc6slf" path="res://puzzle_node.tscn" id="3_3sinh"]
+[ext_resource type="PackedScene" uid="uid://gecbl7u18155" path="res://blockade.tscn" id="5_c1j31"]
+
+[node name="Room2" type="Node2D"]
+
+[node name="SecondArea" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(30, -31)
+y_sort_enabled = true
+texture = ExtResource("1_qpa7s")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Tutorial1" parent="." instance=ExtResource("2_ve4wb")]
+position = Vector2(205, 229)
+
+[node name="PuzzleNode2" parent="Tutorial1" instance=ExtResource("3_3sinh")]
+path = true
+
+[node name="PuzzleNode4" parent="Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 0)
+
+[node name="PuzzleNode5" parent="Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 16)
+path = true
+
+[node name="PuzzleNode6" parent="Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 16)
+path = true
+
+[node name="PuzzleSequence" parent="." instance=ExtResource("2_higx6")]
+position = Vector2(246, 221)
+
+[node name="Tutorial1" parent="PuzzleSequence" instance=ExtResource("2_ve4wb")]
+
+[node name="PuzzleNode" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
+
+[node name="PuzzleNode2" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 0)
+path = true
+
+[node name="PuzzleNode4" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 16)
+
+[node name="PuzzleNode5" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 16)
+path = true
+
+[node name="PuzzleNode6" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 32)
+path = true
+
+[node name="PuzzleNode7" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 32)
+
+[node name="Tutorial2" parent="PuzzleSequence" instance=ExtResource("2_ve4wb")]
+position = Vector2(40, 0)
+row_size = 3
+required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/Room2/PuzzleSequence/Tutorial1")
+
+[node name="PuzzleNode" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+
+[node name="PuzzleNode2" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 0)
+
+[node name="PuzzleNode4" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 0)
+path = true
+
+[node name="PuzzleNode5" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 16)
+
+[node name="PuzzleNode6" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 16)
+
+[node name="PuzzleNode7" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 16)
+path = true
+
+[node name="PuzzleNode8" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 32)
+path = true
+
+[node name="PuzzleNode9" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 32)
+
+[node name="PuzzleNode10" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 32)
+
+[node name="Blockade" parent="PuzzleSequence/Tutorial2" instance=ExtResource("5_c1j31")]
+position = Vector2(8, 24)
+
+[node name="Tutorial4" parent="PuzzleSequence" instance=ExtResource("2_ve4wb")]
+position = Vector2(100, 0)
+row_size = 3
+holes = [Vector2i(2, 0), Vector2i(0, 2), Vector2i(1, 1)]
+required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/Room2/PuzzleSequence/Tutorial2")
+
+[node name="PuzzleNode" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
+
+[node name="PuzzleNode2" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 0)
+path = true
+
+[node name="PuzzleNode8" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 16)
+path = true
+
+[node name="PuzzleNode5" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 16)
+path = true
+
+[node name="PuzzleNode6" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 32)
+path = true
+
+[node name="PuzzleNode7" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 32)
+
+[node name="Tutorial3" parent="PuzzleSequence" instance=ExtResource("2_ve4wb")]
+position = Vector2(160, 0)
+row_size = 3
+required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/Room2/PuzzleSequence/Tutorial4")
+
+[node name="PuzzleNode" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+
+[node name="PuzzleNode2" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 0)
+path = true
+
+[node name="PuzzleNode4" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 0)
+
+[node name="PuzzleNode8" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 16)
+
+[node name="PuzzleNode9" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 16)
+
+[node name="PuzzleNode10" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 16)
+
+[node name="PuzzleNode5" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 32)
+path = true
+
+[node name="PuzzleNode6" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 32)
+path = true
+
+[node name="PuzzleNode7" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 32)
+
+[node name="PuzzleGrid2" parent="." instance=ExtResource("2_ve4wb")]
+position = Vector2(406, 156)
+row_size = 3
+holes = [Vector2i(1, 1)]
+
+[node name="PuzzleNode" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+
+[node name="PuzzleNode2" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 0)
+path = true
+
+[node name="PuzzleNode4" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 0)
+
+[node name="PuzzleNode5" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 16)
+
+[node name="PuzzleNode6" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 16)
+path = true
+
+[node name="PuzzleNode7" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(0, 32)
+path = true
+
+[node name="PuzzleNode8" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(16, 32)
+
+[node name="PuzzleNode9" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
+position = Vector2(32, 32)

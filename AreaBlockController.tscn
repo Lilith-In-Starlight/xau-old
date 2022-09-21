@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvy67v1v31g1r"]
+
+[ext_resource type="Script" path="res://UnblockerArea.gd" id="1_884bg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lvab"]
+size = Vector2(35, 20)
+
+[node name="AreaBlockController" type="Area2D"]
+position = Vector2(477, 178)
+script = ExtResource("1_884bg")
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2lvab")
+
+[connection signal="body_entered" from="." to="." method="_on_unblocker_body_entered"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds7fr13u8cqvt"]
+
+[ext_resource type="Script" path="res://PuzzleGrid.gd" id="3_sy4yt"]
+
+[node name="PuzzleGrid" type="Node2D"]
+texture_filter = 1
+script = ExtResource("3_sy4yt")
+row_size = 2
+holes = []
+required = NodePath("")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpirarl3jej81"]
+
+[ext_resource type="Texture2D" uid="uid://ci06dho8qgf7j" path="res://Sprites/Player.png" id="1_1nq7t"]
+[ext_resource type="Script" path="res://Character.gd" id="1_sveru"]
+[ext_resource type="Script" path="res://game.gd" id="1_vxtc5"]
+[ext_resource type="PackedScene" uid="uid://d3dsmfa2d30eb" path="res://HouseRoom1.tscn" id="2_ujlgv"]
+[ext_resource type="PackedScene" uid="uid://bunha58s5mxvx" path="res://HouseRoom2.tscn" id="3_gvnuh"]
+[ext_resource type="PackedScene" uid="uid://c5clrha30827x" path="res://Cursor.tscn" id="6_ksglf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1pu2l"]
+radius = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ev3rc"]
+atlas = ExtResource("1_1nq7t")
+region = Rect2(10, 0, 5, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3h6hi"]
+animations = [{
+"frames": [SubResource("AtlasTexture_ev3rc")],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D" groups=["GameNode"]]
+texture_repeat = 1
+y_sort_enabled = true
+script = ExtResource("1_vxtc5")
+metadata/movie_path = "D:/movies"
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="House" parent="World" instance=ExtResource("2_ujlgv")]
+
+[node name="Room2" parent="World" instance=ExtResource("3_gvnuh")]
+visible = false
+
+[node name="Colission" type="StaticBody2D" parent="World"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Colission"]
+polygon = PackedVector2Array(30, 85, 255, 85, 263, 85, 263, 104, 504, 104, 504, 313, 30, 313, 30, 305, 495, 305, 495, 111, 255, 111, 255, 92, 38, 92, 38, 180, 255, 180, 255, 137, 460, 137, 460, 268, 451, 268, 451, 145, 395, 145, 395, 181, 264, 181, 264, 189, 39, 189, 39, 304, 30, 304)
+
+[node name="Character" type="CharacterBody2D" parent="."]
+editor_description = "The player"
+position = Vector2(152, 89)
+collision_mask = 58
+motion_mode = 1
+script = ExtResource("1_sveru")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Character"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_1pu2l")
+
+[node name="Animations" type="AnimatedSprite2D" parent="Character"]
+frames = SubResource("SpriteFrames_3h6hi")
+
+[node name="Camera2d" type="Camera2D" parent="Character"]
+current = true
+smoothing_enabled = true
+
+[node name="Cursor" parent="." instance=ExtResource("6_ksglf")]
