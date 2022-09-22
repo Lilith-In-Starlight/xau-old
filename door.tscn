@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=3 uid="uid://cr68sn4mi5t7c"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_06yuv"]
+[ext_resource type="Texture2D" uid="uid://dqe51r45iray2" path="res://Sprites/BarCell/BarCell.png" id="1_r0su5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8cc2"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(0, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqerk"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(40, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4pq6"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(80, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8upw"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(120, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17a6q"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(160, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1md5"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(200, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcflq"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(240, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5npy"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(280, 0, 40, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufqhb"]
+atlas = ExtResource("1_r0su5")
+region = Rect2(320, 0, 40, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3oyqo"]
+animations = [{
+"frames": [SubResource("AtlasTexture_j8cc2"), SubResource("AtlasTexture_xqerk"), SubResource("AtlasTexture_t4pq6"), SubResource("AtlasTexture_c8upw"), SubResource("AtlasTexture_17a6q"), SubResource("AtlasTexture_g1md5"), SubResource("AtlasTexture_jcflq"), SubResource("AtlasTexture_p5npy"), SubResource("AtlasTexture_ufqhb")],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8kb8"]
+size = Vector2(40, 6)
+
+[node name="Door" type="Node2D"]
+z_as_relative = false
+script = ExtResource("1_06yuv")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_3oyqo")
+offset = Vector2(0, -28)
+
+[node name="Collision" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="Collision"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_t8kb8")
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

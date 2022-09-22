@@ -12,7 +12,7 @@ size = Vector2(60, 76)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56yo"]
 size = Vector2(49, 63)
 
-[node name="HouseKidRoom" type="CanvasGroup"]
+[node name="HouseKidRoom" type="Node2D"]
 
 [node name="Room" type="Sprite2D" parent="."]
 texture = ExtResource("1_we0pg")
@@ -68,6 +68,9 @@ shape = SubResource("RectangleShape2D_s56yo")
 [node name="PuzzleGrid" parent="." instance=ExtResource("2_fj6wq")]
 position = Vector2(130, 276)
 holes = [Vector2i(0, 1)]
+background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+framed = true
 
 [node name="PuzzleNode" parent="PuzzleGrid" instance=ExtResource("3_o62y8")]
 path = true
