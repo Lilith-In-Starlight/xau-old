@@ -87,9 +87,10 @@ centered = false
 
 [node name="JailPuzzle" parent="." instance=ExtResource("2_dgqm1")]
 position = Vector2(143, 162)
+holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-framed = true
+puzzle_id = "tutorial_puzzle"
 
 [node name="PuzzleNode" parent="JailPuzzle" instance=ExtResource("3_16ul3")]
 path = true
@@ -108,7 +109,7 @@ holes = [Vector2i(0, 0)]
 required_puzzle = NodePath("../../JailPuzzle")
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-framed = true
+puzzle_id = "default"
 
 [node name="PuzzleNode6" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
 position = Vector2(16, 0)
@@ -124,9 +125,10 @@ position = Vector2(16, 16)
 [node name="PuzzleGrid2" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
 position = Vector2(44, 0)
 row_size = 2
+holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-framed = true
+puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
 
@@ -147,9 +149,10 @@ position = Vector2(8, 8)
 [node name="PuzzleGrid4" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
 position = Vector2(88, 0)
 row_size = 2
+holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-framed = true
+puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
 
@@ -173,9 +176,10 @@ position = Vector2(8, 16)
 [node name="PuzzleGrid5" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
 position = Vector2(132, 0)
 row_size = 2
+holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-framed = true
+puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
 
@@ -205,9 +209,10 @@ position = Vector2(8, 16)
 [node name="PuzzleGrid6" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
 position = Vector2(176, 0)
 row_size = 2
+holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-framed = true
+puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
 

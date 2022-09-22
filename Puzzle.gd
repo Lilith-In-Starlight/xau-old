@@ -31,6 +31,9 @@ signal was_solved
 ## Whether the puzzle can connect to other puzzles
 @export var framed := true
 
+@export var puzzle_id := "default"
+
+
 ## Whether the puzzle was solved or not
 var solved := false
 
@@ -74,6 +77,8 @@ func _ready():
 	child_entered_tree.connect(_on_child_entered_tree)
 	child_exiting_tree.connect(_on_child_exiting_tree)
 	display_connections()
+	if puzzle_id != "default":
+		SaveData.upid[puzzle_id] = self
 
 
 func _input(delta):
@@ -92,6 +97,15 @@ func _input(delta):
 				solved = true
 				correct = true
 				was_solved.emit()
+
+
+func check_correct():
+	var unhappy_nodes := []
+	for i in get_children():
+		if i.is_in_group("PuzzleNode"):
+			if !i.check():
+				unhappy_nodes.append(i)
+	return unhappy_nodes.is_empty()
 
 ## Makes the puzzle look green to indicate that it is correct
 func show_correct():

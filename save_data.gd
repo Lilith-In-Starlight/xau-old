@@ -4,6 +4,7 @@ const save_path := "user://savedata.xau"
 
 var data := {}
 
+var upid := {}
 
 func _ready():
 	var file := File.new()

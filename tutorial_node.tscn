@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://7qo4m8g8sl3o"]
+
+[ext_resource type="Script" path="res://tutorial_node.gd" id="1_4md24"]
+[ext_resource type="Texture2D" uid="uid://cmlsna44t02si" path="res://Sprites/GUI/SpaceKey.png" id="2_uqmkc"]
+[ext_resource type="Texture2D" uid="uid://dwewe4e1xqary" path="res://Sprites/GUI/Wasd.png" id="3_qtbi4"]
+[ext_resource type="Texture2D" uid="uid://df0i3xtffdqxk" path="res://Sprites/GUI/RightClick.png" id="4_g573j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0t2v"]
+atlas = ExtResource("2_uqmkc")
+region = Rect2(0, 0, 105, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7so2"]
+atlas = ExtResource("2_uqmkc")
+region = Rect2(105, 0, 105, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8s6b8"]
+animations = [{
+"frames": [SubResource("AtlasTexture_l0t2v"), SubResource("AtlasTexture_x7so2")],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lke5"]
+atlas = ExtResource("4_g573j")
+region = Rect2(0, 0, 45, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82qg1"]
+atlas = ExtResource("4_g573j")
+region = Rect2(45, 0, 45, 55)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qq436"]
+animations = [{
+"frames": [SubResource("AtlasTexture_4lke5"), SubResource("AtlasTexture_82qg1")],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="TutorialNode" type="Node2D"]
+script = ExtResource("1_4md24")
+
+[node name="Space" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_8s6b8")
+playing = true
+
+[node name="Label" type="Label" parent="Space"]
+offset_left = -25.0
+offset_top = 14.0
+offset_right = 24.0
+offset_bottom = 40.0
+text = "SPACE"
+
+[node name="Rclick" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+frames = SubResource("SpriteFrames_qq436")
+playing = true
+
+[node name="Wasd" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -6)
+texture = ExtResource("3_qtbi4")
+
+[node name="Label2" type="Label" parent="Wasd"]
+offset_left = -23.0
+offset_top = 20.0
+offset_right = 26.0
+offset_bottom = 46.0
+text = "WASD"

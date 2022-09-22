@@ -11,15 +11,12 @@
 texture_filter = 1
 script = ExtResource("3_sy4yt")
 row_size = 3
-holes = []
-background_color = null
-off_background_color = null
-framed = null
+holes = [Vector2i(0, 1)]
+puzzle_id = null
 
 [node name="NoNode" type="Node2D" parent="."]
 
 [node name="Frame" type="Node2D" parent="NoNode"]
-visible = false
 
 [node name="TopLeft" type="Sprite2D" parent="NoNode/Frame"]
 position = Vector2(-10, -10)
