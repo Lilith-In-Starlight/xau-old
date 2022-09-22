@@ -21,8 +21,14 @@ func _ready():
 
 
 func _process(delta):
-	_ready()
+	$PathMark.visible = path
 	if not Engine.is_editor_hint():
+		if cursor_node.position.distance_to(global_position) < 6:
+			$Sprite2d.scale.x = 1.2
+			$Sprite2d.scale.y = 1.2
+		else:
+			$Sprite2d.scale.x = 1.0
+			$Sprite2d.scale.y = 1.0
 		var count := 0
 		var sum := 0
 		if $Lines.get_child_count() < connections.size():
@@ -89,11 +95,12 @@ func _input(delta):
 	if get_parent().is_enabled():
 		if Input.is_action_just_pressed("connect"):
 			if cursor_node.position.distance_to(global_position) < 6:
-				get_parent().unshow_correct()
+				get_parent().correct = false
 				if cursor_node.connecting_from == null:
 					cursor_node.connecting_from = self
 			elif cursor_node.connecting_from == self:
 				connect_puzzle(cursor_node.position)
+
 
 func connect_puzzle(target):
 	raycast.target_position = target - global_position

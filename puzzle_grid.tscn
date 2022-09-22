@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" path="res://PuzzleGrid.gd" id="3_sy4yt"]
 
-[node name="PuzzleGrid" type="Node2D"]
+[node name="PuzzleGrid" type="Node2D" groups=["Puzzle", "PuzzleGrid"]]
 texture_filter = 1
 script = ExtResource("3_sy4yt")
-row_size = 2
+row_size = 3
 holes = []
-required = NodePath("")

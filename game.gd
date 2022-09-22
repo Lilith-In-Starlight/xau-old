@@ -7,3 +7,7 @@ extends Node2D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	for i in $World.get_children():
+		if SaveData.data.has(str(i.get_path())):
+			i.modulate.a = SaveData.data[str(i.get_path())]
+

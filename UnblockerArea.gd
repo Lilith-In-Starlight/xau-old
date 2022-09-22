@@ -1,22 +1,26 @@
 extends Area2D
 
-@export var BlockingLayer :NodePath
+@export var BlockingLayer :Node2D
 @export_range(0.0, 1.0) var goal :float = 0.0
-@onready var BlockingNode := get_node(BlockingLayer)
+@export var UnblockingLayer :Node2D
+@export_range(0.0, 1.0) var anti_goal :float = 0.0
 func _ready():
-	if !BlockingNode.visible:
-		BlockingNode.modulate.a = 0.0
-	BlockingNode.visible = true
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	if !BlockingLayer.visible:
+		BlockingLayer.modulate.a = 0.0
+		BlockingLayer.visible = true
+	
+	if UnblockingLayer != null and !UnblockingLayer.visible:
+		UnblockingLayer.modulate.a = 0.0
+		UnblockingLayer.visible = true
 
 
 func _on_unblocker_body_entered(body):
-	if BlockingNode.modulate.a != goal:
+	if BlockingLayer.modulate.a != goal:
 		var tween = create_tween()
-		tween.tween_property(BlockingNode, "modulate:a", goal, 0.5)
+		tween.tween_property(BlockingLayer, "modulate:a", goal, 0.5)
+		tween.play()
+	if UnblockingLayer != null and UnblockingLayer.modulate.a != anti_goal:
+		var tween = create_tween()
+		tween.tween_property(UnblockingLayer, "modulate:a", anti_goal, 0.5)
 		tween.play()
 	

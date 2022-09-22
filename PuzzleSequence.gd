@@ -13,13 +13,8 @@ func _ready():
 	var n :Node2D = null
 	for i in get_children():
 		if n != null:
-			i.required = n.get_path()
 			i.required_puzzle = n
 			n.was_solved.connect(i._on_required_was_solved)
-			if not Engine.is_editor_hint():
-				for j in i.get_children():
-					if n.solved == false:
-						j.modulate.a = 0
 		n = i
 
 
@@ -29,4 +24,4 @@ func _process(delta):
 	for i in get_children():
 		i.position.x = x
 		i.position.y = 0
-		x += i.row_size * 20
+		x += i.row_size * i.spacing + separation

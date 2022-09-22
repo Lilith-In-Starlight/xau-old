@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://d3dsmfa2d30eb"]
 
 [ext_resource type="Texture2D" uid="uid://hklauworl7m0" path="res://Sprites/House.png" id="1_uh56c"]
+[ext_resource type="Script" path="res://Cord.gd" id="2_3r6tt"]
 [ext_resource type="PackedScene" uid="uid://ds7fr13u8cqvt" path="res://puzzle_grid.tscn" id="2_dgqm1"]
 [ext_resource type="Script" path="res://HouseMagicJail.gd" id="2_vk25d"]
 [ext_resource type="PackedScene" uid="uid://cklivvijc6slf" path="res://puzzle_node.tscn" id="3_16ul3"]
 [ext_resource type="PackedScene" uid="uid://gecbl7u18155" path="res://blockade.tscn" id="4_1hnlb"]
 [ext_resource type="Texture2D" uid="uid://dsbbdiwav3fr5" path="res://Sprites/JailOff.png" id="4_kqjwa"]
-[ext_resource type="PackedScene" uid="uid://dvy67v1v31g1r" path="res://AreaBlockController.tscn" id="5_bqugi"]
 [ext_resource type="Texture2D" uid="uid://cu1n0nlt6au3c" path="res://Sprites/JailOn.png" id="6_nyuvv"]
 [ext_resource type="PackedScene" uid="uid://d0inyfvs503ph" path="res://puzzle_sequence.tscn" id="7_tcxpe"]
 
@@ -15,9 +15,35 @@ texture_filter = 1
 
 [node name="Visible" type="Sprite2D" parent="."]
 position = Vector2(30, -31)
+z_as_relative = false
 texture = ExtResource("1_uh56c")
 centered = false
 metadata/_edit_lock_ = true
+
+[node name="Cord" type="Line2D" parent="." node_paths=PackedStringArray("required_puzzle")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+points = PackedVector2Array(136, 99, 122, 108, 122, 162, 135, 162)
+width = 2.0
+script = ExtResource("2_3r6tt")
+on_color = Color(0.690196, 1, 0.917647, 1)
+required_puzzle = NodePath("../JailPuzzle")
+
+[node name="Cord2" type="Line2D" parent="." node_paths=PackedStringArray("required_puzzle")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(57, 0)
+points = PackedVector2Array(207, 111, 207, 116, 189, 116, 189, 162, 110, 162)
+width = 2.0
+script = ExtResource("2_3r6tt")
+on_color = Color(0.690196, 1, 0.917647, 1)
+required_puzzle = NodePath("../JailPuzzle")
+
+[node name="Cord3" type="Line2D" parent="." node_paths=PackedStringArray("required_puzzle")]
+position = Vector2(125, -29)
+points = PackedVector2Array(148, 114, 139, 114, 139, 140)
+width = 2.0
+script = ExtResource("2_3r6tt")
+on_color = Color(0.690196, 1, 0.917647, 1)
+required_puzzle = NodePath("../JailPuzzle")
 
 [node name="Jail" type="StaticBody2D" parent="."]
 position = Vector2(390, 67)
@@ -40,164 +66,125 @@ centered = false
 
 [node name="JailPuzzle" parent="." instance=ExtResource("2_dgqm1")]
 position = Vector2(143, 162)
-row_size = 3
 
 [node name="PuzzleNode" parent="JailPuzzle" instance=ExtResource("3_16ul3")]
 path = true
 
 [node name="PuzzleNode3" parent="JailPuzzle" instance=ExtResource("3_16ul3")]
-position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleSequence" parent="." instance=ExtResource("7_tcxpe")]
-position = Vector2(286, 68)
+position = Vector2(281, 68)
+separation = 12.0
 
-[node name="PuzzleGrid3" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
+[node name="PuzzleGrid3" parent="PuzzleSequence" node_paths=PackedStringArray("required_puzzle") instance=ExtResource("2_dgqm1")]
+row_size = 2
 holes = [Vector2i(0, 0)]
-required = NodePath("../../JailPuzzle")
+required_puzzle = NodePath("../../JailPuzzle")
 
 [node name="PuzzleNode6" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
 position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
-position = Vector2(0, 16)
+position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode2" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
-position = Vector2(16, 16)
+position = Vector2(0, 16)
 
 [node name="PuzzleGrid2" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
-position = Vector2(40, 0)
-required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/House/PuzzleSequence/PuzzleGrid3")
+position = Vector2(44, 0)
+row_size = 2
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, 16)
+position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 16)
+position = Vector2(0, 16)
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(8, 8)
 
 [node name="PuzzleGrid4" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
-position = Vector2(80, 0)
-required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/House/PuzzleSequence/PuzzleGrid2")
+position = Vector2(88, 0)
+row_size = 2
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 0)
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, 16)
+position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 16)
+position = Vector2(0, 16)
 path = true
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(8, 8)
 
 [node name="Blockade2" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(8, 16)
 
 [node name="PuzzleGrid5" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
-position = Vector2(120, 0)
-required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/House/PuzzleSequence/PuzzleGrid4")
+position = Vector2(132, 0)
+row_size = 2
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, 16)
+position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 16)
+position = Vector2(0, 16)
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(0, 8)
 
 [node name="Blockade3" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(8, 0)
 
 [node name="Blockade4" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(16, 8)
 
 [node name="Blockade2" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(8, 16)
 
 [node name="PuzzleGrid6" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
-position = Vector2(160, 0)
-required = NodePath("/root/@@16300/@@642/@@643/@@652/@@655/@@663/@@671/@@672/@@674/@@700/@@701/@@740/MainScreen/@@9612/@@9439/@@9441/@@9443/@@9444/@@9445/@@9446/House/PuzzleSequence/PuzzleGrid5")
+position = Vector2(176, 0)
+row_size = 2
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 0)
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(0, 16)
+position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(16, 16)
+position = Vector2(0, 16)
 path = true
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(0, 8)
 
 [node name="Blockade4" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(16, 8)
 
 [node name="Blockade2" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("4_1hnlb")]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(8, 16)
-
-[node name="AreaIn" parent="." instance=ExtResource("5_bqugi")]
-position = Vector2(452, 124)
-BlockingLayer = NodePath("../../Room2")
-
-[node name="AreaOut" parent="." instance=ExtResource("5_bqugi")]
-position = Vector2(477, 187)
-BlockingLayer = NodePath("../../Room2")
-goal = 1.0
 
 [connection signal="was_solved" from="JailPuzzle" to="Jail" method="_on_puzzle_grid_was_solved"]

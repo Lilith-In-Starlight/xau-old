@@ -10,7 +10,9 @@ const STOP_MULT = 0.3
 const GO_MULT = 0.2
 
 func _ready():
-	pass # Replace with function body.
+	if SaveData.data.has("player_pos_x"):
+		position.x = SaveData.data["player_pos_x"]
+		position.y = SaveData.data["player_pos_y"]
 
 
 
