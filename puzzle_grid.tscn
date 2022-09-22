@@ -1,9 +1,64 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds7fr13u8cqvt"]
+[gd_scene load_steps=7 format=3 uid="uid://ds7fr13u8cqvt"]
 
+[ext_resource type="Texture2D" uid="uid://bphxydb3x1nvn" path="res://Sprites/ScreenFrame/1.png" id="2_llvbv"]
 [ext_resource type="Script" path="res://PuzzleGrid.gd" id="3_sy4yt"]
+[ext_resource type="Texture2D" uid="uid://e4qgcwjmemdu" path="res://Sprites/ScreenFrame/2.png" id="3_v0twb"]
+[ext_resource type="Texture2D" uid="uid://bbjf4rx6hib06" path="res://Sprites/ScreenFrame/3.png" id="4_8lp2i"]
+[ext_resource type="Texture2D" uid="uid://o7qeyqxxkca1" path="res://Sprites/ScreenFrame/4.png" id="5_aqxyt"]
+[ext_resource type="Texture2D" uid="uid://bcoc7quo1u27e" path="res://Sprites/ScreenFrame/Edge.png" id="6_xxqit"]
 
 [node name="PuzzleGrid" type="Node2D" groups=["Puzzle", "PuzzleGrid"]]
 texture_filter = 1
 script = ExtResource("3_sy4yt")
 row_size = 3
 holes = []
+
+[node name="NoNode" type="Node2D" parent="."]
+
+[node name="Frame" type="Node2D" parent="NoNode"]
+
+[node name="TopLeft" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(-2, -2)
+texture = ExtResource("2_llvbv")
+centered = false
+
+[node name="TopRight" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(2, -2)
+texture = ExtResource("3_v0twb")
+centered = false
+
+[node name="BottomRight" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(2, 2)
+texture = ExtResource("4_8lp2i")
+centered = false
+
+[node name="BottomLeft" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(-2, 2)
+texture = ExtResource("5_aqxyt")
+centered = false
+
+[node name="Top" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(39, -3)
+rotation = 1.5708
+texture = ExtResource("6_xxqit")
+centered = false
+offset = Vector2(0, -1)
+
+[node name="Right" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(42, 5)
+rotation = 3.14159
+texture = ExtResource("6_xxqit")
+centered = false
+offset = Vector2(-3, -1)
+
+[node name="Left" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(43, 2)
+texture = ExtResource("6_xxqit")
+centered = false
+
+[node name="Bottom" type="Sprite2D" parent="NoNode/Frame"]
+position = Vector2(34, 5)
+rotation = -1.57107
+texture = ExtResource("6_xxqit")
+centered = false
+offset = Vector2(-3, 0)

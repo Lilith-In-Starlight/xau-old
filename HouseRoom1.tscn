@@ -71,6 +71,7 @@ position = Vector2(143, 162)
 path = true
 
 [node name="PuzzleNode3" parent="JailPuzzle" instance=ExtResource("3_16ul3")]
+position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleSequence" parent="." instance=ExtResource("7_tcxpe")]
@@ -87,11 +88,11 @@ position = Vector2(16, 0)
 path = true
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
-position = Vector2(16, 0)
+position = Vector2(0, 16)
 path = true
 
 [node name="PuzzleNode2" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
-position = Vector2(0, 16)
+position = Vector2(16, 16)
 
 [node name="PuzzleGrid2" parent="PuzzleSequence" instance=ExtResource("2_dgqm1")]
 position = Vector2(44, 0)
@@ -100,14 +101,15 @@ row_size = 2
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
-path = true
-
-[node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
 position = Vector2(16, 0)
 path = true
 
-[node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
+[node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
 position = Vector2(0, 16)
+path = true
+
+[node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
+position = Vector2(16, 16)
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("4_1hnlb")]
 position = Vector2(8, 8)
@@ -119,13 +121,14 @@ row_size = 2
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
+position = Vector2(16, 0)
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
-position = Vector2(16, 0)
+position = Vector2(0, 16)
 path = true
 
 [node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
-position = Vector2(0, 16)
+position = Vector2(16, 16)
 path = true
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("4_1hnlb")]
@@ -141,14 +144,15 @@ row_size = 2
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
-path = true
-
-[node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
 position = Vector2(16, 0)
 path = true
 
-[node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
+[node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
 position = Vector2(0, 16)
+path = true
+
+[node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
+position = Vector2(16, 16)
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("4_1hnlb")]
 position = Vector2(0, 8)
@@ -169,13 +173,14 @@ row_size = 2
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
 
 [node name="PuzzleNode3" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
+position = Vector2(16, 0)
 
 [node name="PuzzleNode7" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
-position = Vector2(16, 0)
+position = Vector2(0, 16)
 path = true
 
 [node name="PuzzleNode8" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
-position = Vector2(0, 16)
+position = Vector2(16, 16)
 path = true
 
 [node name="Blockade" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("4_1hnlb")]

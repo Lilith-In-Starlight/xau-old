@@ -73,15 +73,19 @@ func _input(delta):
 
 ## Makes the puzzle look green to indicate that it is correct
 func show_correct():
-	var tween := create_tween()
-	tween.tween_property(self, "modulate", Color.GREEN, 0.4)
-	tween.play()
+	for i in get_children():
+		if not i.name == "NoNode":
+			var tween := i.create_tween()
+			tween.tween_property(i, "modulate", Color.PLUM, 0.2)
+			tween.play()
 
 ## Makes the puzzle look white to show that it is not correct
 func unshow_correct():
-	var tween := create_tween()
-	tween.tween_property(self, "modulate", Color.WHITE, 0.4)
-	tween.play()
+	for i in get_children():
+		if not i.name == "NoNode":
+			var tween := i.create_tween()
+			tween.tween_property(i, "modulate", Color.WHITE, 0.2)
+			tween.play()
 
 ## Called when the puzzle required to interact with this one is solved
 func _on_required_was_solved():
@@ -105,12 +109,14 @@ func update_correctness_visuals(queue_redraw: bool = false) -> void:
 ## Display whether the puzzle is enabled
 func update_enabled_visuals() -> void:
 	for i in get_children():
-		if is_enabled():
-			i.modulate.a = 1.0
-		elif Engine.is_editor_hint():
-			i.modulate.a = 1.0
-		else:
-			i.modulate.a = 0.0
+		if not i.name == "NoNode":
+			if is_enabled():
+				i.modulate.a = 1.0
+			elif Engine.is_editor_hint():
+				i.modulate.a = 1.0
+			else:
+				i.modulate.a = 0.0
+	queue_redraw()
 
 func _on_child_entered_tree(gone_node: Node):
 	queue_redraw()
@@ -120,17 +126,18 @@ func _on_child_exiting_tree(gone_node: Node):
 
 
 func get_rect() -> Rect2:
-	var lesser :Vector2 = get_children()[0].position
+	var lesser :Vector2 = Vector2(0, 0)
 	var greater := Vector2(1, 1)
 	for i in get_children():
-		if i.position.x < lesser.x:
-			lesser.x = i.position.x
-		elif i.position.x > greater.x:
-			greater.x = i.position.x
-		if i.position.y < lesser.y:
-			lesser.y = i.position.y
-		elif i.position.y > greater.y:
-			greater.y = i.position.y
+		if not i.name == "NoNode":
+			if i.position.x < lesser.x:
+				lesser.x = i.position.x
+			elif i.position.x > greater.x:
+				greater.x = i.position.x
+			if i.position.y < lesser.y:
+				lesser.y = i.position.y
+			elif i.position.y > greater.y:
+				greater.y = i.position.y
 	return Rect2(lesser, greater)
 
 

@@ -26,6 +26,28 @@ func _ready():
 	update_children_positions()
 
 
+
+func _draw():
+	var rect := get_rect()
+	var new_rect = rect.grow(8)
+	var color := Color("#0c0c0c")
+	if is_enabled():
+		color =  Color("0d0d0d")
+	draw_rect(new_rect, Color("#0c0c0c"), true)
+	$NoNode/Frame/TopLeft.position = new_rect.position + Vector2(-2,-2)
+	$NoNode/Frame/TopRight.position = new_rect.position + Vector2(new_rect.size.x - 13, -2)
+	$NoNode/Frame/BottomLeft.position = new_rect.position + Vector2(-2, new_rect.size.y - 13)
+	$NoNode/Frame/BottomRight.position = new_rect.position + Vector2(-13, -13) + new_rect.size
+	$NoNode/Frame/Left.position = new_rect.position + Vector2(-2, 1)
+	$NoNode/Frame/Left.scale.y = new_rect.size.y - 2
+	$NoNode/Frame/Right.position = new_rect.position + Vector2(new_rect.size.x, 1)
+	$NoNode/Frame/Right.scale.y = new_rect.size.y - 2
+	$NoNode/Frame/Bottom.position = new_rect.position + Vector2(2, new_rect.size.y)
+	$NoNode/Frame/Bottom.scale.y = new_rect.size.x - 2
+	$NoNode/Frame/Top.position = new_rect.position + Vector2(2, -2)
+	$NoNode/Frame/Top.scale.y = new_rect.size.x - 2
+
+
 ## Updates the node's children positions to match the row size
 func update_children_positions(exclusions: Array = []):
 	var x := 0
