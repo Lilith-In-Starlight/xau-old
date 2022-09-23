@@ -1,14 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpirarl3jej81"]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Texture2D" uid="uid://ci06dho8qgf7j" path="res://Sprites/Player.png" id="1_1nq7t"]
 [ext_resource type="Script" path="res://Character.gd" id="1_sveru"]
 [ext_resource type="Script" path="res://game.gd" id="1_vxtc5"]
-[ext_resource type="PackedScene" uid="uid://d3dsmfa2d30eb" path="res://HouseRoom1.tscn" id="2_ujlgv"]
-[ext_resource type="PackedScene" uid="uid://dvy67v1v31g1r" path="res://AreaBlockController.tscn" id="3_6nd34"]
-[ext_resource type="PackedScene" uid="uid://bunha58s5mxvx" path="res://HouseRoom2.tscn" id="3_gvnuh"]
-[ext_resource type="PackedScene" uid="uid://bltxsjl1gpd7g" path="res://house_kid_room.tscn" id="4_t4wla"]
-[ext_resource type="PackedScene" uid="uid://c5clrha30827x" path="res://Cursor.tscn" id="6_ksglf"]
-[ext_resource type="PackedScene" uid="uid://7qo4m8g8sl3o" path="res://tutorial_node.tscn" id="9_j2lan"]
+[ext_resource type="PackedScene" path="res://Areas/House/HouseRoom1.tscn" id="2_ujlgv"]
+[ext_resource type="PackedScene" path="res://Areas/AreaBlockController.tscn" id="3_6nd34"]
+[ext_resource type="PackedScene" path="res://Areas/House/HouseRoom2.tscn" id="3_gvnuh"]
+[ext_resource type="PackedScene" path="res://Areas/House/house_kid_room.tscn" id="4_t4wla"]
+[ext_resource type="PackedScene" path="res://GUI/Cursor.tscn" id="6_ksglf"]
+[ext_resource type="PackedScene" path="res://GUI/tutorial_node.tscn" id="9_j2lan"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1pu2l"]
 radius = 2.5
