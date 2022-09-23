@@ -15,7 +15,6 @@ class_name PuzzleNode
 
 var connections: Array[PuzzleNode] = []
 
-
 func _ready():
 	$PathMark.visible = path
 
@@ -70,16 +69,23 @@ func show_failure():
 
 func _input(delta):
 	if get_parent().is_enabled():
-		if Input.is_action_just_pressed("connect"):
+		if Input.is_action_pressed("connect"):
 			if cursor_node.position.distance_to(global_position) < 6:
 				get_parent().correct = false
 				if cursor_node.connecting_from == null:
 					cursor_node.connecting_from = self
 			elif cursor_node.connecting_from == self:
 				connect_puzzle(cursor_node.position)
+		elif Input.is_action_pressed("noconnect"):
+			if cursor_node.position.distance_to(global_position) < 6:
+				get_parent().correct = false
+				if cursor_node.connecting_from == null:
+					cursor_node.connecting_from = self
+			elif cursor_node.connecting_from == self:
+				connect_puzzle(cursor_node.position, true)
 
 
-func connect_puzzle(target):
+func connect_puzzle(target, disconnect := false):
 	raycast.target_position = target - global_position
 	raycast.force_raycast_update()
 	if raycast.is_colliding():
@@ -87,15 +93,17 @@ func connect_puzzle(target):
 		if raycast_collider.is_in_group("PuzzleNode"):
 			if raycast_collider.get_parent() == get_parent() or (!get_parent().framed and !raycast_collider.get_parent().framed):
 				if raycast_collider.get_parent().is_enabled():
-					if not raycast_collider in connections:
+					if not raycast_collider in connections and not disconnect:
 						connections.append(raycast_collider)
 						raycast_collider.connections.append(self)
 						cursor_node.connecting_from = raycast_collider
 						raycast_collider.connect_puzzle(target)
+						get_parent().display_connections()
 					else:
 						connections.erase(raycast_collider)
 						raycast_collider.connections.erase(self)
 						cursor_node.connecting_from = raycast_collider
 						raycast_collider.connect_puzzle(target)
+						get_parent().display_connections()
 	raycast.target_position = Vector2.ZERO
 

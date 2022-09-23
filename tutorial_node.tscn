@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://7qo4m8g8sl3o"]
+[gd_scene load_steps=16 format=3 uid="uid://7qo4m8g8sl3o"]
 
 [ext_resource type="Script" path="res://tutorial_node.gd" id="1_4md24"]
 [ext_resource type="Texture2D" uid="uid://cmlsna44t02si" path="res://Sprites/GUI/SpaceKey.png" id="2_uqmkc"]
+[ext_resource type="Texture2D" uid="uid://b03fkodfonlff" path="res://Sprites/GUI/ClickHold.png" id="3_f58j1"]
 [ext_resource type="Texture2D" uid="uid://dwewe4e1xqary" path="res://Sprites/GUI/Wasd.png" id="3_qtbi4"]
-[ext_resource type="Texture2D" uid="uid://df0i3xtffdqxk" path="res://Sprites/GUI/RightClick.png" id="4_g573j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l0t2v"]
 atlas = ExtResource("2_uqmkc")
@@ -21,17 +21,37 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4lke5"]
-atlas = ExtResource("4_g573j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hydhe"]
+atlas = ExtResource("3_f58j1")
 region = Rect2(0, 0, 45, 55)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_82qg1"]
-atlas = ExtResource("4_g573j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gd5v"]
+atlas = ExtResource("3_f58j1")
 region = Rect2(45, 0, 45, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxxsm"]
+atlas = ExtResource("3_f58j1")
+region = Rect2(90, 0, 45, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekl3g"]
+atlas = ExtResource("3_f58j1")
+region = Rect2(135, 0, 45, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jh2h"]
+atlas = ExtResource("3_f58j1")
+region = Rect2(180, 0, 45, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxknt"]
+atlas = ExtResource("3_f58j1")
+region = Rect2(225, 0, 45, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c06js"]
+atlas = ExtResource("3_f58j1")
+region = Rect2(270, 0, 45, 55)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qq436"]
 animations = [{
-"frames": [SubResource("AtlasTexture_4lke5"), SubResource("AtlasTexture_82qg1")],
+"frames": [SubResource("AtlasTexture_hydhe"), SubResource("AtlasTexture_0gd5v"), SubResource("AtlasTexture_lxxsm"), SubResource("AtlasTexture_ekl3g"), SubResource("AtlasTexture_5jh2h"), SubResource("AtlasTexture_wxknt"), SubResource("AtlasTexture_c06js")],
 "loop": true,
 "name": &"default",
 "speed": 2.0
@@ -51,10 +71,18 @@ offset_right = 24.0
 offset_bottom = 40.0
 text = "SPACE"
 
-[node name="Rclick" type="AnimatedSprite2D" parent="."]
+[node name="ClickHold" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 frames = SubResource("SpriteFrames_qq436")
 playing = true
+
+[node name="Label3" type="Label" parent="ClickHold"]
+offset_left = -24.0
+offset_top = 23.0
+offset_right = 25.0
+offset_bottom = 49.0
+text = "DRAG"
+metadata/_edit_use_anchors_ = true
 
 [node name="Wasd" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)

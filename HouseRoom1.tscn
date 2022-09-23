@@ -109,7 +109,6 @@ holes = [Vector2i(0, 0)]
 required_puzzle = NodePath("../../JailPuzzle")
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode6" parent="PuzzleSequence/PuzzleGrid3" instance=ExtResource("3_16ul3")]
 position = Vector2(16, 0)
@@ -128,7 +127,6 @@ row_size = 2
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid2" instance=ExtResource("3_16ul3")]
 
@@ -152,7 +150,6 @@ row_size = 2
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid4" instance=ExtResource("3_16ul3")]
 
@@ -179,7 +176,6 @@ row_size = 2
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid5" instance=ExtResource("3_16ul3")]
 
@@ -212,7 +208,6 @@ row_size = 2
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/PuzzleGrid6" instance=ExtResource("3_16ul3")]
 

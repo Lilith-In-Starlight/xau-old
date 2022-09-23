@@ -53,6 +53,8 @@ func _input(delta):
 		if connecting_from:
 			connecting_from.queue_redraw()
 			connecting_from = null
+	if Input.is_action_just_released("connect") or Input.is_action_just_released("noconnect"):
+		connecting_from = null
 			
 	if Input.is_action_just_pressed("confirm"):
 		connecting_from = null

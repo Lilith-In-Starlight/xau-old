@@ -11,7 +11,7 @@
 texture_filter = 1
 script = ExtResource("3_sy4yt")
 row_size = 3
-holes = [Vector2i(0, 1)]
+holes = []
 
 [node name="NoNode" type="Node2D" parent="."]
 
