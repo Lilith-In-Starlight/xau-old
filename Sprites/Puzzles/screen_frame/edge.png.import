@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba5kwlyt0xgqd"
-path="res://.godot/imported/PathNode.png-0e8350223a38fa7c3295df03437d11fb.ctex"
+uid="uid://bcoc7quo1u27e"
+path="res://.godot/imported/edge.png-584e888cf8077bfc6ab6d97a54b2ea19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Puzzles/PathNode.png"
-dest_files=["res://.godot/imported/PathNode.png-0e8350223a38fa7c3295df03437d11fb.ctex"]
+source_file="res://Sprites/puzzles/screen_frame/edge.png"
+dest_files=["res://.godot/imported/edge.png-584e888cf8077bfc6ab6d97a54b2ea19.ctex"]
 
 [params]
 

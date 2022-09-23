@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbjf4rx6hib06"
-path="res://.godot/imported/3.png-32a677724372f01fabb24a1e825089e8.ctex"
+uid="uid://c4nvx7vqoq2dx"
+path="res://.godot/imported/path_node_tile.png-bcb5bce755349a9e643d930d28ca4ec3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Puzzles/ScreenFrame/3.png"
-dest_files=["res://.godot/imported/3.png-32a677724372f01fabb24a1e825089e8.ctex"]
+source_file="res://Sprites/puzzles/path_node_tile.png"
+dest_files=["res://.godot/imported/path_node_tile.png-bcb5bce755349a9e643d930d28ca4ec3.ctex"]
 
 [params]
 

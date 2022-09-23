@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcoc7quo1u27e"
-path="res://.godot/imported/Edge.png-f129425fbf5ed9e08e47b75e52de572c.ctex"
+uid="uid://ba5kwlyt0xgqd"
+path="res://.godot/imported/path_node.png-82ec3dd44e0a6712c20588f650d82bb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Puzzles/ScreenFrame/Edge.png"
-dest_files=["res://.godot/imported/Edge.png-f129425fbf5ed9e08e47b75e52de572c.ctex"]
+source_file="res://Sprites/puzzles/path_node.png"
+dest_files=["res://.godot/imported/path_node.png-82ec3dd44e0a6712c20588f650d82bb3.ctex"]
 
 [params]
 
