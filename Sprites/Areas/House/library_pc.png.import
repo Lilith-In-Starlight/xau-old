@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boemvigp1v5t2"
-path="res://.godot/imported/library_pc.png-9a5ef51d4dc7433d733bacfbf53e5700.ctex"
+path="res://.godot/imported/library_pc.png-1da69a5f31281cb34a63f73754a85514.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Areas/House/library_pc.png"
-dest_files=["res://.godot/imported/library_pc.png-9a5ef51d4dc7433d733bacfbf53e5700.ctex"]
+source_file="res://sprites/areas/house/library_pc.png"
+dest_files=["res://.godot/imported/library_pc.png-1da69a5f31281cb34a63f73754a85514.ctex"]
 
 [params]
 

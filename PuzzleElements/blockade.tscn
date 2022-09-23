@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" path="res://Sprites/puzzles/blockade.png" id="1_fjjk5"]
+[ext_resource type="Texture2D" path="res://sprites/puzzles/blockade.png" id="1_fjjk5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfv10"]
 size = Vector2(3.53553, 3.53553)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba5kwlyt0xgqd"
-path="res://.godot/imported/path_node.png-82ec3dd44e0a6712c20588f650d82bb3.ctex"
+path="res://.godot/imported/path_node.png-d4c5f18002995265bfed919b36f0c90f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/puzzles/path_node.png"
-dest_files=["res://.godot/imported/path_node.png-82ec3dd44e0a6712c20588f650d82bb3.ctex"]
+source_file="res://sprites/puzzles/path_node.png"
+dest_files=["res://.godot/imported/path_node.png-d4c5f18002995265bfed919b36f0c90f.ctex"]
 
 [params]
 

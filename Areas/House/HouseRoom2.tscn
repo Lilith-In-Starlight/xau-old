@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3]
 
-[ext_resource type="Texture2D" path="res://Sprites/Areas/House/HouseFront.png" id="1_qpa7s"]
+[ext_resource type="Texture2D" path="res://sprites/areas/house/house_front.png" id="1_qpa7s"]
 [ext_resource type="Script" path="res://Misc/Cord.gd" id="2_2d3jo"]
 [ext_resource type="PackedScene" path="res://PuzzleElements/puzzle_sequence.tscn" id="2_higx6"]
 [ext_resource type="PackedScene" path="res://PuzzleElements/puzzle_grid.tscn" id="2_ve4wb"]
 [ext_resource type="PackedScene" path="res://PuzzleElements/puzzle_node.tscn" id="3_3sinh"]
 [ext_resource type="PackedScene" path="res://PuzzleElements/blockade.tscn" id="5_c1j31"]
-[ext_resource type="Texture2D" path="res://Sprites/Areas/House/WallTop.png" id="7_k45mt"]
-[ext_resource type="Texture2D" path="res://Sprites/Areas/House/Entrance.png" id="8_p3k5x"]
+[ext_resource type="Texture2D" path="res://sprites/areas/house/wall_top.png" id="7_k45mt"]
+[ext_resource type="Texture2D" path="res://sprites/areas/house/entrance.png" id="8_p3k5x"]
 [ext_resource type="Script" path="res://Misc/YSortObject.gd" id="9_lsssh"]
 [ext_resource type="PackedScene" path="res://Misc/door.tscn" id="10_r72kr"]
 

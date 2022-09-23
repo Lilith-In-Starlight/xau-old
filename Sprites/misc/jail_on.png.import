@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmlsna44t02si"
-path="res://.godot/imported/SpaceKey.png-751570010d3555e8ba0c5558ba7441b0.ctex"
+uid="uid://cu1n0nlt6au3c"
+path="res://.godot/imported/jail_on.png-033d3de593c81c4c396b798688d8536a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/GUI/SpaceKey.png"
-dest_files=["res://.godot/imported/SpaceKey.png-751570010d3555e8ba0c5558ba7441b0.ctex"]
+source_file="res://sprites/misc/jail_on.png"
+dest_files=["res://.godot/imported/jail_on.png-033d3de593c81c4c396b798688d8536a.ctex"]
 
 [params]
 

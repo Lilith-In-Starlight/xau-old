@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu1n0nlt6au3c"
-path="res://.godot/imported/JailOn.png-c91085f0f626afe9b3b22ac6448e1247.ctex"
+uid="uid://dpxkav1gg5pie"
+path="res://.godot/imported/cursor_sprite.png-2317069e3d8eef4c421c48861a999a8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Misc/JailOn.png"
-dest_files=["res://.godot/imported/JailOn.png-c91085f0f626afe9b3b22ac6448e1247.ctex"]
+source_file="res://sprites/gui/cursor_sprite.png"
+dest_files=["res://.godot/imported/cursor_sprite.png-2317069e3d8eef4c421c48861a999a8b.ctex"]
 
 [params]
 

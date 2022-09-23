@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqe51r45iray2"
-path="res://.godot/imported/BarCell.png-503c031305ab6202af61662046ee8d99.ctex"
+uid="uid://dsbbdiwav3fr5"
+path="res://.godot/imported/jail_off.png-be2eecbb32e07f808f9b7456e0fd1a7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/BarCell/BarCell.png"
-dest_files=["res://.godot/imported/BarCell.png-503c031305ab6202af61662046ee8d99.ctex"]
+source_file="res://sprites/misc/jail_off.png"
+dest_files=["res://.godot/imported/jail_off.png-be2eecbb32e07f808f9b7456e0fd1a7d.ctex"]
 
 [params]
 

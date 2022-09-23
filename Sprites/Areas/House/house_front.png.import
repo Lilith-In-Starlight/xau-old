@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df0i3xtffdqxk"
-path="res://.godot/imported/RightClick.png-580dc0db37287dde84987117fd8e0534.ctex"
+uid="uid://d1susxwngdfp1"
+path="res://.godot/imported/house_front.png-83b2d7de46a6e8a7ad94701ee7227639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/GUI/RightClick.png"
-dest_files=["res://.godot/imported/RightClick.png-580dc0db37287dde84987117fd8e0534.ctex"]
+source_file="res://sprites/areas/house/house_front.png"
+dest_files=["res://.godot/imported/house_front.png-83b2d7de46a6e8a7ad94701ee7227639.ctex"]
 
 [params]
 

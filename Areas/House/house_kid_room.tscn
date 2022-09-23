@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3]
 
-[ext_resource type="Texture2D" path="res://Sprites/Areas/House/Room.png" id="1_we0pg"]
+[ext_resource type="Texture2D" path="res://sprites/areas/house/kid_room.png" id="1_we0pg"]
 [ext_resource type="Script" path="res://Misc/Cord.gd" id="2_6iylp"]
-[ext_resource type="Texture2D" uid="uid://boemvigp1v5t2" path="res://Sprites/Areas/House/library_pc.png" id="2_ani1j"]
+[ext_resource type="Texture2D" path="res://sprites/areas/house/library_pc.png" id="2_ani1j"]
 [ext_resource type="PackedScene" path="res://PuzzleElements/puzzle_grid.tscn" id="2_fj6wq"]
 [ext_resource type="PackedScene" path="res://PuzzleElements/puzzle_node.tscn" id="3_o62y8"]
 

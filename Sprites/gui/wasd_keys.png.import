@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b03fkodfonlff"
-path="res://.godot/imported/ClickHold.png-51f0a55edd2e248088a96bb62e0bfd70.ctex"
+uid="uid://dwewe4e1xqary"
+path="res://.godot/imported/wasd_keys.png-88aa7baced67f1e49a045e53bd0f364d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/GUI/ClickHold.png"
-dest_files=["res://.godot/imported/ClickHold.png-51f0a55edd2e248088a96bb62e0bfd70.ctex"]
+source_file="res://sprites/gui/wasd_keys.png"
+dest_files=["res://.godot/imported/wasd_keys.png-88aa7baced67f1e49a045e53bd0f364d.ctex"]
 
 [params]
 

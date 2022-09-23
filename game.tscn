@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3]
 
-[ext_resource type="Texture2D" path="res://Sprites/player.png" id="1_1nq7t"]
+[ext_resource type="Texture2D" path="res://sprites/player.png" id="1_1nq7t"]
 [ext_resource type="Script" path="res://character.gd" id="1_sveru"]
 [ext_resource type="Script" path="res://game.gd" id="1_vxtc5"]
 [ext_resource type="PackedScene" path="res://Areas/House/HouseRoom1.tscn" id="2_ujlgv"]
