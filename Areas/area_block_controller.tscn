@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://Areas/UnblockerArea.gd" id="1_884bg"]
+[ext_resource type="Script" path="res://areas/area_block_controller.gd" id="1_884bg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lvab"]
 size = Vector2(35, 20)

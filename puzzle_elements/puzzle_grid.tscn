@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3]
 
-[ext_resource type="Texture2D" path="res://sprites/puzzles/screen_frame/top_left.png" id="2_llvbv"]
-[ext_resource type="Script" path="res://PuzzleElements/PuzzleGrid.gd" id="3_sy4yt"]
-[ext_resource type="Texture2D" path="res://sprites/puzzles/screen_frame/top_right.png" id="3_v0twb"]
-[ext_resource type="Texture2D" path="res://sprites/puzzles/screen_frame/bottom_right.png" id="4_8lp2i"]
-[ext_resource type="Texture2D" path="res://sprites/puzzles/screen_frame/bottom_left.png" id="5_aqxyt"]
-[ext_resource type="Texture2D" path="res://sprites/puzzles/screen_frame/edge.png" id="6_xxqit"]
+[ext_resource type="Texture2D" uid="uid://bphxydb3x1nvn" path="res://sprites/puzzles/screen_frame/top_left.png" id="2_llvbv"]
+[ext_resource type="Script" path="res://puzzle_elements/puzzle_grid.gd" id="3_sy4yt"]
+[ext_resource type="Texture2D" uid="uid://e4qgcwjmemdu" path="res://sprites/puzzles/screen_frame/top_right.png" id="3_v0twb"]
+[ext_resource type="Texture2D" uid="uid://bbjf4rx6hib06" path="res://sprites/puzzles/screen_frame/bottom_right.png" id="4_8lp2i"]
+[ext_resource type="Texture2D" uid="uid://o7qeyqxxkca1" path="res://sprites/puzzles/screen_frame/bottom_left.png" id="5_aqxyt"]
+[ext_resource type="Texture2D" uid="uid://bcoc7quo1u27e" path="res://sprites/puzzles/screen_frame/edge.png" id="6_xxqit"]
 
 [node name="PuzzleGrid" type="Node2D" groups=["Puzzle", "PuzzleGrid"]]
 texture_filter = 1

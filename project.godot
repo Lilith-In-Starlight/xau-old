@@ -12,12 +12,12 @@ _global_script_classes=[{
 "base": "Node2D",
 "class": &"Puzzle",
 "language": &"GDScript",
-"path": "res://PuzzleElements/Puzzle.gd"
+"path": "res://puzzle_elements/puzzle.gd"
 }, {
 "base": "StaticBody2D",
 "class": &"PuzzleNode",
 "language": &"GDScript",
-"path": "res://PuzzleElements/puzzle_node.gd"
+"path": "res://puzzle_elements/puzzle_node.gd"
 }]
 _global_script_class_icons={
 "Puzzle": "",

@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3]
 
-[ext_resource type="Script" path="res://GUI/tutorial_node.gd" id="1_4md24"]
-[ext_resource type="Texture2D" path="res://sprites/gui/space_key.png" id="2_uqmkc"]
-[ext_resource type="Texture2D" path="res://sprites/gui/click_hold.png" id="3_f58j1"]
-[ext_resource type="Texture2D" path="res://sprites/gui/wasd_keys.png" id="3_qtbi4"]
+[ext_resource type="Script" path="res://gui/tutorial_node.gd" id="1_4md24"]
+[ext_resource type="Texture2D" uid="uid://cmlsna44t02si" path="res://sprites/gui/space_key.png" id="2_uqmkc"]
+[ext_resource type="Texture2D" uid="uid://b03fkodfonlff" path="res://sprites/gui/click_hold.png" id="3_f58j1"]
+[ext_resource type="Texture2D" uid="uid://dwewe4e1xqary" path="res://sprites/gui/wasd_keys.png" id="3_qtbi4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l0t2v"]
 atlas = ExtResource("2_uqmkc")
