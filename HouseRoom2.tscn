@@ -26,12 +26,9 @@ metadata/_edit_lock_ = true
 [node name="Door" parent="." instance=ExtResource("10_r72kr")]
 position = Vector2(-6, 230)
 
-[node name="Entrance" type="Sprite2D" parent="."]
-position = Vector2(-40, 230)
-texture = ExtResource("8_p3k5x")
-centered = false
-offset = Vector2(0, -90)
-script = ExtResource("9_lsssh")
+[node name="Exit" parent="." instance=ExtResource("10_r72kr")]
+position = Vector2(77, 305)
+requirements = 2
 
 [node name="Cord" type="Line2D" parent="." node_paths=PackedStringArray("required_puzzle")]
 points = PackedVector2Array(112, 165, 112, 172, 199, 172, 199, 188)
@@ -55,13 +52,35 @@ width = 2.0
 script = ExtResource("2_2d3jo")
 required_puzzle = NodePath("../PuzzleGrid2")
 
+[node name="Cord3" type="Line2D" parent="." node_paths=PackedStringArray("required_puzzle")]
+modulate = Color(0.901961, 0.901961, 0.901961, 1)
+position = Vector2(300, 20)
+points = PackedVector2Array(-146, 185, -146, 263, -155, 272, -192, 272, -192, 284)
+width = 2.0
+script = ExtResource("2_2d3jo")
+required_puzzle = NodePath("../PuzzleGrid2")
+
+[node name="Cord4" type="Line2D" parent="." node_paths=PackedStringArray("required_puzzle")]
+modulate = Color(0.901961, 0.901961, 0.901961, 1)
+position = Vector2(300, 20)
+points = PackedVector2Array(116, 244, 116, 268, -151, 268)
+width = 2.0
+script = ExtResource("2_2d3jo")
+required_puzzle = NodePath("../PuzzleSequence/Tutorial3")
+
+[node name="Entrance" type="Sprite2D" parent="."]
+position = Vector2(-40, 230)
+texture = ExtResource("8_p3k5x")
+centered = false
+offset = Vector2(0, -90)
+script = ExtResource("9_lsssh")
+
 [node name="Tutorial2" parent="." groups=["branching_tutorial"] instance=ExtResource("2_ve4wb")]
 position = Vector2(91, 138)
 row_size = 2
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode2" parent="Tutorial2" instance=ExtResource("3_3sinh")]
 path = true
@@ -91,7 +110,6 @@ holes = []
 required_puzzle = NodePath("../Tutorial2")
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode2" parent="Tutorial1" instance=ExtResource("3_3sinh")]
 path = true
@@ -116,7 +134,6 @@ holes = []
 required_puzzle = NodePath("../../Tutorial1")
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/Tutorial1" instance=ExtResource("3_3sinh")]
 
@@ -143,7 +160,6 @@ position = Vector2(40, 0)
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/Tutorial2" instance=ExtResource("3_3sinh")]
 
@@ -185,7 +201,6 @@ position = Vector2(96, 0)
 holes = [Vector2i(2, 0), Vector2i(1, 1), Vector2i(0, 2)]
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/Tutorial4" instance=ExtResource("3_3sinh")]
 
@@ -213,7 +228,6 @@ position = Vector2(152, 0)
 holes = []
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleSequence/Tutorial3" instance=ExtResource("3_3sinh")]
 
@@ -249,7 +263,6 @@ position = Vector2(406, 156)
 holes = [Vector2i(1, 1)]
 background_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 off_background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-puzzle_id = "default"
 
 [node name="PuzzleNode" parent="PuzzleGrid2" instance=ExtResource("3_3sinh")]
 
@@ -283,4 +296,6 @@ z_index = 1
 texture = ExtResource("7_k45mt")
 centered = false
 
+[connection signal="was_solved" from="PuzzleSequence/Tutorial3" to="Exit" method="_on_required_was_solved"]
 [connection signal="was_solved" from="PuzzleGrid2" to="Door" method="_on_required_was_solved"]
+[connection signal="was_solved" from="PuzzleGrid2" to="Exit" method="_on_required_was_solved"]

@@ -26,6 +26,10 @@ func _ready():
 	update_children_positions()
 
 
+func _process(delta):
+	if Engine.is_editor_hint():
+		update_children_positions()
+
 
 func _draw():
 	super()
